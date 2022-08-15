@@ -13,5 +13,6 @@ module.exports = {
   rules: {
     'no-console': 'off', // only for testing purposes.
     'class-methods-use-this': 'off',
+    'no-param-reassign': 'off',
   },
 };
