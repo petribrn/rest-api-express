@@ -6,9 +6,9 @@
 const corsOptions = {
   origin: (origin, callback) => {
     if (!origin || corsWhiteList.indexOf(origin) !== -1) {
-      callback(null, true);
+      callback(null, { origin: true });
     } else {
-      callback(new Error('Not allowed by CORS'));
+      callback(new Error('Not allowed by CORS'), { origin: false });
     }
   },
 };
