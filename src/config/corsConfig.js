@@ -1,6 +1,6 @@
 const corsWhiteList = [
   `${process.env.PROD_DOMAIN}`,
-  'http://localhost:3000',
+  `${process.env.DEV_DOMAIN}`,
 ];
 
 const corsOptions = {

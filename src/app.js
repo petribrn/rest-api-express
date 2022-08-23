@@ -1,5 +1,5 @@
 import express from 'express';
-import helmet from 'helmet';
+// import helmet from 'helmet';
 import cors from 'cors';
 import { resolve } from 'path';
 import corsOptions from './config/corsConfig';
@@ -21,7 +21,7 @@ class App {
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(express.json());
     this.app.use('/images/', express.static(resolve(__dirname, '..', 'uploads', 'images')));
-    this.app.use(helmet());
+    // this.app.use(helmet());
     this.app.use(cors(corsOptions));
   }
 
