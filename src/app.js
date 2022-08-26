@@ -3,6 +3,7 @@ import helmet from 'helmet';
 import cors from 'cors';
 import { resolve } from 'path';
 // import corsOptions from './config/corsConfig';
+import delay from 'express-delay';
 import homeRoutes from './routes/homeRoutes';
 import userRoutes from './routes/userRoutes';
 import tokenRoutes from './routes/tokenRoutes';
@@ -23,6 +24,7 @@ class App {
     this.app.use('/images/', express.static(resolve(__dirname, '..', 'uploads', 'images')));
     this.app.use(helmet());
     this.app.use(cors());
+    this.app.use(delay(2000));
   }
 
   routes() {
